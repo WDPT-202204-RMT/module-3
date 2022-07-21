@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>React Intro</title>
+
+	    <!-- Load Babel - used to parse JSX -->
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<!-- React's core library-->
+		<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<!-- ReactDOM library renders the content created with React to the DOM. -->
+		<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		
+</head>
+<body>
+	<div id="root">
+		this is the standard way of writing things
+	</div>
+	<script type="text/babel">
+		let name = "Ironhack"
+/* 		let div = document.createElement("div")
+		div.innerHTML = "<h1>Hello " + name[0] + "!</h1>"
+		document.getElementById("root").appendChild(div) */
+  		ReactDOM.render(
+			<div>
+				<h1>Hello {name[0]}!</h1>
+			</div>, document.getElementById("root")
+		)
+	</script>
+</body>
+</html>
